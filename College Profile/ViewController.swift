@@ -18,8 +18,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, image: UIImage(named: "Default")!))
-        college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, image: UIImage(named: "Default")!))
+        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, image: UIImage(named: "MichiganState")!))
+        college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, image: UIImage(named: "ottawa")!))
+        college.append(Colleges(name: "University Of Illinois", location: "Illinois", numberOfStudents: 20000, image: UIImage(named: "UofI")!))
+        college.append(Colleges(name: "College Of Charleston", location: "South Carolina", numberOfStudents: 12000, image: UIImage(named: "Charleston")!))
         }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return college.count
@@ -45,9 +47,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
     
-           let alert = UIAlertController(title: "Add City", message: nil, preferredStyle: .Alert)
+           let alert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            textField.placeholder = "Add City Here"
+            textField.placeholder = "Add College Here"
             }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         alert.addAction(cancelAction)
