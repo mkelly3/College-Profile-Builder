@@ -58,8 +58,16 @@
                             <constraint firstItem="zOk-6i-aSJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kEQ-GS-BSx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MzJ-Ux-D1N"/>
+                    <navigationItem key="navigationItem" id="MzJ-Ux-D1N">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="rin-oH-ZH8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dZc-Hm-C8Z">
+                            <connections>
+                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="kYQ-h2-cRf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="rin-oH-ZH8" id="8rq-2E-b3Q"/>
                         <outlet property="tableView" destination="zOk-6i-aSJ" id="sWr-JQ-78V"/>
                     </connections>
                 </viewController>
