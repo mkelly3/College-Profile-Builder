@@ -59,10 +59,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MzJ-Ux-D1N">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="rin-oH-ZH8"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="rin-oH-ZH8">
+                            <connections>
+                                <action selector="onEditButtonTapped:" destination="BYZ-38-t0r" id="M08-CS-fJP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dZc-Hm-C8Z">
                             <connections>
-                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="kYQ-h2-cRf"/>
+                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="L00-RL-T77"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

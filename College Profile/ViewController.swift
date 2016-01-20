@@ -13,32 +13,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var cities: [Colleges] = []
+    var college : [Colleges] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
- 
-    }
+        editButton.tag = 0
+        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, image: UIImage(named: "Default")!))
+        college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, image: UIImage(named: "Default")!))
+        }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
+        return college.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
-        cell.textLabel?.text = cities[indexPath.row].name
+        cell.textLabel?.text = college[indexPath.row].name
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            cities.removeAtIndex(indexPath.row)
+            college.removeAtIndex(indexPath.row)
             tableView.reloadData()
         }
     }
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let colleges = college[sourceIndexPath.row]
+        college.removeAtIndex(sourceIndexPath.row)
+        college.insert(colleges, atIndex: destinationIndexPath.row)
+    }
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Add City", message: nil, preferredStyle: .Alert)
+    
+           let alert = UIAlertController(title: "Add City", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
             textField.placeholder = "Add City Here"
             }
@@ -46,11 +53,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(cancelAction)
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) -> Void in
             let cityTextField = alert.textFields![0] as UITextField
-            self.cities.append(Colleges(name: cityTextField.text!))
+            self.college.append(Colleges(name: cityTextField.text!))
             self.tableView.reloadData()
         }
         alert.addAction(addAction)
         self.presentViewController(alert, animated: true, completion: nil)
+      
+        }
+    
+    @IBAction func onEditButtonTapped(sender: UIBarButtonItem) {
+        if sender.tag == 0
+        {
+            tableView.editing = true
+            sender.tag = 1
+        }
+        else
+        {
+            tableView.editing = false
+            sender.tag = 0
+        }
+        
     }
 }
+
 
