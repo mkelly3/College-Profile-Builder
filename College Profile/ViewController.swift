@@ -46,6 +46,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         college.removeAtIndex(sourceIndexPath.row)
         college.insert(colleges, atIndex: destinationIndexPath.row)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! DetailViewController
+        let index = tableView.indexPathForSelectedRow?.row
+        dvc.colleges = college[index!]
+    }
+
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
     

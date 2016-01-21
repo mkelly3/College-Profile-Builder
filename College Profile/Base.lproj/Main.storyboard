@@ -41,6 +41,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="vHE-YL-gOd" kind="show" id="3sM-Md-HoJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -78,6 +81,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1164" y="-403"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="tQn-wX-Sdn">
+            <objects>
+                <viewController id="vHE-YL-gOd" customClass="DetailViewController" customModule="College_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Jl-Vz-aSO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ok9-HA-MPa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMM-do-m7A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nM-Ek-JVa">
+                                <rect key="frame" x="252" y="144" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="TmH-g0-bC0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-Lj-oTr">
+                                <rect key="frame" x="252" y="182" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="tZx-7N-18O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMY-Ds-AgA">
+                                <rect key="frame" x="252" y="106" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="IfR-XO-GUn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
+                                <rect key="frame" x="180" y="233" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XVw-aE-jfT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-a1-IBb">
+                                <rect key="frame" x="274" y="388" width="68" height="51"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="vHE-YL-gOd" eventType="touchUpInside" id="6SJ-HQ-oNq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DA1-AE-o6j" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="7T5-Dd-6ac"/>
+                            <constraint firstItem="zMY-Ds-AgA" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="BkB-jz-daM"/>
+                            <constraint firstItem="qAP-a1-IBb" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="GGw-7r-3pO"/>
+                            <constraint firstItem="9nM-Ek-JVa" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="X6S-Bb-4SJ"/>
+                            <constraint firstItem="cyv-Lj-oTr" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="cSe-Q8-tBh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationTextField" destination="cyv-Lj-oTr" id="Hw5-yp-H6a"/>
+                        <outlet property="myImage" destination="DA1-AE-o6j" id="o5i-Qm-naK"/>
+                        <outlet property="nameTextField" destination="zMY-Ds-AgA" id="V0b-1O-wUl"/>
+                        <outlet property="numberOfStudentsTextField" destination="cyv-Lj-oTr" id="hHK-P4-Dhp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQR-gt-Bcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811" y="-403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KPz-0d-xYh">
