@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nM-Ek-JVa">
-                                <rect key="frame" x="252" y="144" width="97" height="30"/>
+                                <rect key="frame" x="252" y="194" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TmH-g0-bC0"/>
@@ -104,7 +104,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-Lj-oTr">
-                                <rect key="frame" x="252" y="182" width="97" height="30"/>
+                                <rect key="frame" x="252" y="238" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="tZx-7N-18O"/>
@@ -113,7 +113,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMY-Ds-AgA">
-                                <rect key="frame" x="252" y="106" width="97" height="30"/>
+                                <rect key="frame" x="252" y="144" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="IfR-XO-GUn"/>
@@ -122,14 +122,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
-                                <rect key="frame" x="180" y="233" width="240" height="128"/>
+                                <rect key="frame" x="180" y="309" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="N0U-vf-iyC"/>
                                     <constraint firstAttribute="width" constant="250" id="XVw-aE-jfT"/>
+                                    <constraint firstAttribute="height" constant="150" id="lAh-dC-Y8Q"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-a1-IBb">
-                                <rect key="frame" x="274" y="388" width="68" height="51"/>
+                                <rect key="frame" x="266" y="72" width="68" height="51"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
@@ -149,8 +151,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="locationTextField" destination="cyv-Lj-oTr" id="Hw5-yp-H6a"/>
-                        <outlet property="myImage" destination="DA1-AE-o6j" id="o5i-Qm-naK"/>
+                        <outlet property="locationTextField" destination="9nM-Ek-JVa" id="EzJ-4c-7GY"/>
+                        <outlet property="myImage" destination="DA1-AE-o6j" id="u6X-So-OOw"/>
                         <outlet property="nameTextField" destination="zMY-Ds-AgA" id="V0b-1O-wUl"/>
                         <outlet property="numberOfStudentsTextField" destination="cyv-Lj-oTr" id="hHK-P4-Dhp"/>
                     </connections>

@@ -18,11 +18,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, image: UIImage(named: "Default")!))
-        college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, image: UIImage(named: "Default")!))
+        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, image: UIImage(named: "MichiganState")!))
+        college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, image: UIImage(named: "ottawa")!))
+        college.append(Colleges(name: "University of Illinois", location: "Illinois", numberOfStudents: 25000, image: UIImage(named: "UofI")!))
+        college.append(Colleges(name: "College of Charleston", location: "South Carolina", numberOfStudents: 12000, image: UIImage(named: "Charleston")!))
         }
+    
     override func viewWillAppear(animated: Bool) {
-        viewWillAppear(animated)
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,23 +44,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
         }
     }
+    
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         let colleges = college[sourceIndexPath.row]
         college.removeAtIndex(sourceIndexPath.row)
         college.insert(colleges, atIndex: destinationIndexPath.row)
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let dvc = segue.destinationViewController as! DetailViewController
         let index = tableView.indexPathForSelectedRow?.row
         dvc.colleges = college[index!]
     }
-
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
     
-           let alert = UIAlertController(title: "Add City", message: nil, preferredStyle: .Alert)
+           let alert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            textField.placeholder = "Add City Here"
+            textField.placeholder = "Add College Here"
             }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         alert.addAction(cancelAction)
@@ -82,7 +86,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.editing = false
             sender.tag = 0
         }
-        
     }
 }
 
