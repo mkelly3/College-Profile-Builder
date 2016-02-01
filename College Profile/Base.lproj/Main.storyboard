@@ -146,7 +146,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tP-ol-yqO">
-                                <rect key="frame" x="365" y="270" width="37" height="30"/>
+                                <rect key="frame" x="363" y="269" width="37" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Go"/>
                                 <connections>

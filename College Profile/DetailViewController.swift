@@ -24,18 +24,15 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
         nameTextField.text = colleges.name
         locationTextField.text = colleges.location
         numberOfStudentsTextField.text = String(colleges.numberOfStudents)
+        websiteTextField.text = colleges.website
         myImage.image = colleges.image
-
-        nameTextField.resignFirstResponder()
-        locationTextField.resignFirstResponder()
-        numberOfStudentsTextField.resignFirstResponder()
     }
     
     @IBAction func onTappedSaveButton(sender: AnyObject) {
         colleges.numberOfStudents = Int(numberOfStudentsTextField.text!)!
         colleges.name = nameTextField.text!
         colleges.location = locationTextField.text!
-
+        colleges.website = websiteTextField.text!
     }
 
     @IBAction func goToWebsite(sender: AnyObject) {
