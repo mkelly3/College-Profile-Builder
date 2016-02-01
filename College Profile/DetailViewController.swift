@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import SafariServices
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var numberOfStudentsTextField: UITextField!
     @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var websiteTextField: UITextField!
     
     var colleges: Colleges!
 
@@ -36,4 +38,10 @@ class DetailViewController: UIViewController {
 
     }
 
+    @IBAction func goToWebsite(sender: AnyObject) {
+        let url = NSURL(string: websiteTextField.text!)
+        let svc = SFSafariViewController(URL: url!)
+        svc.delegate = self
+        self.presentViewController(svc, animated: true, completion: nil)
+    }
 }
