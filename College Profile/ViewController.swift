@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
