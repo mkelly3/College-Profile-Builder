@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nM-Ek-JVa">
-                                <rect key="frame" x="252" y="178" width="97" height="30"/>
+                                <rect key="frame" x="252" y="172" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TmH-g0-bC0"/>
@@ -104,7 +104,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-Lj-oTr">
-                                <rect key="frame" x="252" y="226" width="97" height="30"/>
+                                <rect key="frame" x="252" y="220" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="tZx-7N-18O"/>
@@ -113,7 +113,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMY-Ds-AgA">
-                                <rect key="frame" x="252" y="140" width="97" height="30"/>
+                                <rect key="frame" x="252" y="123" width="97" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="IfR-XO-GUn"/>
@@ -122,37 +122,52 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-a1-IBb">
-                                <rect key="frame" x="266" y="72" width="68" height="51"/>
+                                <rect key="frame" x="266" y="72" width="68" height="43"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="vHE-YL-gOd" eventType="touchUpInside" id="6SJ-HQ-oNq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
-                                <rect key="frame" x="186" y="354" width="240" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="N0U-vf-iyC"/>
-                                    <constraint firstAttribute="width" constant="250" id="XVw-aE-jfT"/>
-                                    <constraint firstAttribute="height" constant="150" id="lAh-dC-Y8Q"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K21-zJ-jA3">
-                                <rect key="frame" x="252" y="270" width="97" height="30"/>
+                                <rect key="frame" x="252" y="269" width="97" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tP-ol-yqO">
-                                <rect key="frame" x="363" y="269" width="37" height="30"/>
+                                <rect key="frame" x="362" y="268" width="37" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="goToWebsite:" destination="vHE-YL-gOd" eventType="touchUpInside" id="206-8N-mpc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi4-vu-VXD">
+                                <rect key="frame" x="421" y="386" width="65" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onCameraTapped:" destination="vHE-YL-gOd" eventType="touchUpInside" id="fEb-yd-Bis"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aP-7H-eN6">
+                                <rect key="frame" x="421" y="434" width="65" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onLibraryButtonTapped:" destination="vHE-YL-gOd" eventType="touchUpInside" id="J0G-Tk-Lce"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
+                                <rect key="frame" x="191" y="342" width="218" height="185"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="Mtu-eq-yBa"/>
+                                    <constraint firstAttribute="height" constant="185" id="ht4-j6-9VW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,10 +175,14 @@
                             <constraint firstItem="DA1-AE-o6j" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="7T5-Dd-6ac"/>
                             <constraint firstItem="zMY-Ds-AgA" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="BkB-jz-daM"/>
                             <constraint firstItem="qAP-a1-IBb" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="GGw-7r-3pO"/>
+                            <constraint firstItem="4aP-7H-eN6" firstAttribute="top" secondItem="wi4-vu-VXD" secondAttribute="bottom" constant="22" id="K0l-oG-OB9"/>
                             <constraint firstItem="9nM-Ek-JVa" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="X6S-Bb-4SJ"/>
                             <constraint firstItem="cyv-Lj-oTr" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="cSe-Q8-tBh"/>
                             <constraint firstItem="K21-zJ-jA3" firstAttribute="centerX" secondItem="DMM-do-m7A" secondAttribute="centerX" id="gD4-CS-mxH"/>
+                            <constraint firstItem="wi4-vu-VXD" firstAttribute="leading" secondItem="DA1-AE-o6j" secondAttribute="trailing" constant="8" id="rHu-9t-Fza"/>
                             <constraint firstItem="5tP-ol-yqO" firstAttribute="leading" secondItem="K21-zJ-jA3" secondAttribute="trailing" constant="16" id="roY-FG-33k"/>
+                            <constraint firstItem="4aP-7H-eN6" firstAttribute="leading" secondItem="DA1-AE-o6j" secondAttribute="trailing" constant="8" id="vOa-lY-8kb"/>
+                            <constraint firstItem="4aP-7H-eN6" firstAttribute="top" secondItem="wi4-vu-VXD" secondAttribute="bottom" constant="22" id="x8w-9V-wyd"/>
                         </constraints>
                     </view>
                     <connections>
