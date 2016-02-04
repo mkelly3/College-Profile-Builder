@@ -160,7 +160,7 @@
                                     <action selector="onLibraryButtonTapped:" destination="vHE-YL-gOd" eventType="touchUpInside" id="J0G-Tk-Lce"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-AE-o6j">
                                 <rect key="frame" x="191" y="342" width="218" height="185"/>
                                 <animations/>
                                 <constraints>
