@@ -14,8 +14,9 @@
 		3F7444191C4FFF5600FCBF2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7444171C4FFF5600FCBF2F /* LaunchScreen.storyboard */; };
 		3F7444241C4FFF5600FCBF2F /* College_ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7444231C4FFF5600FCBF2F /* College_ProfileTests.swift */; };
 		3F74442F1C4FFF5700FCBF2F /* College_ProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74442E1C4FFF5700FCBF2F /* College_ProfileUITests.swift */; };
-		3F74443D1C50008500FCBF2F /* Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74443C1C50008500FCBF2F /* Colleges.swift */; settings = {ASSET_TAGS = (); }; };
-		3F7444791C51550A00FCBF2F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7444781C51550A00FCBF2F /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F74443D1C50008500FCBF2F /* Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74443C1C50008500FCBF2F /* Colleges.swift */; };
+		3F7444791C51550A00FCBF2F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7444781C51550A00FCBF2F /* DetailViewController.swift */; };
+		3FCBD5C41C6D0A3800613093 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBD5C31C6D0A3800613093 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F7444301C4FFF5700FCBF2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F74443C1C50008500FCBF2F /* Colleges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colleges.swift; sourceTree = "<group>"; };
 		3F7444781C51550A00FCBF2F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3FCBD5C31C6D0A3800613093 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3F7444101C4FFF5600FCBF2F /* ViewController.swift */,
 				3F74443C1C50008500FCBF2F /* Colleges.swift */,
 				3F7444121C4FFF5600FCBF2F /* Main.storyboard */,
+				3FCBD5C31C6D0A3800613093 /* MapViewController.swift */,
 				3F7444781C51550A00FCBF2F /* DetailViewController.swift */,
 				3F7444151C4FFF5600FCBF2F /* Assets.xcassets */,
 				3F7444171C4FFF5600FCBF2F /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 				3F7444111C4FFF5600FCBF2F /* ViewController.swift in Sources */,
 				3F74443D1C50008500FCBF2F /* Colleges.swift in Sources */,
 				3F74440F1C4FFF5600FCBF2F /* AppDelegate.swift in Sources */,
+				3FCBD5C41C6D0A3800613093 /* MapViewController.swift in Sources */,
 				3F7444791C51550A00FCBF2F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

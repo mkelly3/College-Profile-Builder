@@ -25,6 +25,7 @@ class Colleges: NSObject {
         self.website = Website
         self.image = image
         
+        
     }
     
     convenience init(name: String) {

@@ -65,4 +65,10 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+   
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! MapViewController
+        dvc.textField.text = locationTextField.text
+        
+    }
 }

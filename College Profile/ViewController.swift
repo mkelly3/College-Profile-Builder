@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return college.count
     }
