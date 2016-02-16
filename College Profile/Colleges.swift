@@ -30,6 +30,4 @@ class Colleges: NSObject {
         self.init()
         self.name = name
     }
-
-
 }

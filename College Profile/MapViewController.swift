@@ -13,12 +13,11 @@ class MapViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
-    let college = Colleges()
+    var college = Colleges()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        findLocation("Barrington,Illinois")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -69,4 +68,5 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         mapView.setRegion(region, animated: true)
         
     }
-}
+ }
+
