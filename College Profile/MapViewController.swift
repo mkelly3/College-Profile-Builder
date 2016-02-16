@@ -18,9 +18,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        textField.text = college.location
-        findLocation(college.location)
-        
+        findLocation("Barrington,Illinois")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -70,8 +68,5 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
         
-        
     }
-    
-
 }

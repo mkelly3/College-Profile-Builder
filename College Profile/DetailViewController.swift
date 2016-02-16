@@ -65,9 +65,13 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-   
+    @IBAction func onMapButtonTapped(sender: AnyObject)
+    {
+        if locationTextField.text?.characters.count != 0 {
+            colleges.location = locationTextField.text!
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let dvc = segue.destinationViewController as! MapViewController
-
     }
 }

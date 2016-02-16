@@ -158,7 +158,8 @@
                                 <rect key="frame" x="371" y="172" width="30" height="30"/>
                                 <state key="normal" title="Map"/>
                                 <connections>
-                                    <segue destination="eQV-jT-Mw5" kind="show" id="8Ry-8f-rDP"/>
+                                    <action selector="onMapButtonTapped:" destination="vHE-YL-gOd" eventType="touchUpInside" id="hXx-I1-pkb"/>
+                                    <segue destination="eQV-jT-Mw5" kind="show" identifier="" id="8Ry-8f-rDP"/>
                                 </connections>
                             </button>
                         </subviews>
