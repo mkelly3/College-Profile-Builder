@@ -68,7 +68,6 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let dvc = segue.destinationViewController as! MapViewController
-       
-    
+
     }
 }

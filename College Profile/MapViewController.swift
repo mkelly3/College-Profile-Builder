@@ -19,7 +19,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         textField.delegate = self
         textField.text = college.location
-        findLocation(textField.text!)
+        findLocation(college.location)
         
     }
     
