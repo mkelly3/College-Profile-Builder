@@ -13,10 +13,13 @@ class MapViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    let college = Colleges()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        textField.text = college.location
+        findLocation(textField.text!)
         
     }
     
