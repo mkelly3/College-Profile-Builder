@@ -19,16 +19,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        college.append(Colleges(name: "Michigan State", location: "Michigan", numberOfStudents: 30000, Website: "https://msu.edu", image: UIImage(named: "MichiganState")!))
+        college.append(Colleges(name: "Michigan State", location: "East Lansing, MI", numberOfStudents: 30000, Website: "https://msu.edu", image: UIImage(named: "MichiganState")!))
         college.append(Colleges(name: "University Of Ottawa", location: "Ottawa, Canada", numberOfStudents: 40000, Website: "https://www.uottawa.ca/en", image: UIImage(named: "ottawa")!))
-        college.append(Colleges(name: "University of Illinois", location: "Illinois", numberOfStudents: 25000, Website: "http://illinois.edu", image: UIImage(named: "UofI")!))
-        college.append(Colleges(name: "College of Charleston", location: "South Carolina", numberOfStudents: 12000, Website: "http://www.cofc.edu", image: UIImage(named: "Charleston")!))
+        college.append(Colleges(name: "University of Illinois", location: "Champaign, IL", numberOfStudents: 25000, Website: "http://illinois.edu", image: UIImage(named: "UofI")!))
+        college.append(Colleges(name: "College of Charleston", location: "Charleston, SC", numberOfStudents: 12000, Website: "http://www.cofc.edu", image: UIImage(named: "Charleston")!))
         }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return college.count
     }

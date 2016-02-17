@@ -65,4 +65,11 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "2to3") {
+            var svc = segue.destinationViewController as! MapViewController
+                svc.toPass = locationTextField.text!
+        }
+    }
 }
