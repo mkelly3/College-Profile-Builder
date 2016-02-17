@@ -13,11 +13,13 @@ class MapViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
-    var college = Colleges()
+    var toPass : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        textField.text = toPass
+        findLocation(toPass)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
